@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212121;
+    color: #fff;
+
+
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Set width to 100vw to cover the entire viewport */
+    height: 100vh; /* Set height to 100vh to cover the entire viewport */
+    background-image: url(/star.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.clock{
+    background-image: url('/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12PX;
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    border-radius: 8px;
+
+}
+#hrs i{
+    height: 60px;
+    width: 7px;
+}
+#min i{
+    height: 80px;
+    width: 4px;
+}
+#sec i{
+    height: 100px;
+    width: 2px;
+}
+
+
+
+
+
+
